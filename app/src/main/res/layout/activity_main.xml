@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:text="Helmet World"
         android:textSize="25dp"
+        android:fontFamily="serif-monospace"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintLeft_toLeftOf="parent"
