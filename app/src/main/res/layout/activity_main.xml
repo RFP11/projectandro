@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato_bold"
         android:text="Helmet World"
-        android:textColor="@color/brown_a"
+        android:textColor="@color/white"
         android:textSize="35dp"
         app:layout_constraintBottom_toTopOf="@+id/searchView"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
@@ -24,14 +25,14 @@
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/window"
         android:backgroundTintMode="screen"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        android:src="@drawable/window"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.964"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <SearchView
         android:id="@+id/searchView"
@@ -52,12 +53,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="470dp"
-        android:src="@drawable/settings"
         android:backgroundTint="@color/brown_a"
+        android:src="@drawable/settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toEndOf="@+id/searchView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.21" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -89,12 +92,15 @@
         app:layout_constraintVertical_bias="0.281" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
+        android:id="@+id/bottom_navigatin_view"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/brown_a"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
