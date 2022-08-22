@@ -7,6 +7,7 @@
         android:layout_height="match_parent"
         android:background="@color/bl_prim"
         tools:context=".MainActivity">
+<!--Ini buat widget atas-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
@@ -83,22 +84,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-        <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="80dp"
-            android:iconifiedByDefault="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.162" />
+<!--ini Akhir widget-->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigatin_view"
             android:layout_width="0dp"
@@ -122,26 +108,6 @@
                 android:textSize="16sp"
                 android:importantForAutofill="no" />
         </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="abracadabra"
-            app:layout_constraintBottom_toTopOf="@+id/bottom_navigatin_view"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@dr"
-    </ScrollView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
