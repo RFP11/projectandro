@@ -9,13 +9,15 @@
         tools:context=".MainActivity">
 <!--Ini buat widget atas-->
 
+    <!--ini Akhir widget-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/rectangle"
         android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="wrap_content">
+        tools:layout_editor_absoluteX="65dp">
 
         <TextView
             android:id="@+id/tekshello"
@@ -27,8 +29,8 @@
             android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/teksUsername"
             android:layout_width="wrap_content"
@@ -40,8 +42,8 @@
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/tekshello"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/imageMenu"
             android:layout_width="30dp"
@@ -49,11 +51,11 @@
             android:layout_marginEnd="15dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/ic_menu"
-            app:tint="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/tekshello"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tekshello"
-            />
+            app:tint="@color/white" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,100 +66,139 @@
             android:background="@drawable/w_rec"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageMenu"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/imageMenu">
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:hint="@string/search_helmet"
+                android:hint="@string/search_trip"
                 android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
                 android:inputType="text"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
-                android:textColor="@color/white"
-                android:importantForAutofill="no" />
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/search_ic"
+                android:contentDescription="@string/app_name"
+                android:padding="6dp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/aqua" />
 
         </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-<!--ini Akhir widget-->
+
+    <TextView
+        android:id="@+id/recee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recommendation"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:overScrollMode="always"
-        android:scrollbars="none"
+        android:layout_marginTop="10dp"
+        android:id="@+id/scrolled"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutHeader">
+        app:layout_constraintTop_toBottomOf="@+id/recee"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/pagemenu"
+            android:layout_marginTop="10sp">
+
 
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="match_parent"
-                android:layout_height="140sp"
-                android:layout_marginTop="8sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-400dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
-                    android:paddingLeft="7sp">
+                    android:paddingStart="7sp"
+                    android:paddingEnd="20sp">
 
                     <Button
                         android:id="@+id/button6"
+                        style="@android:style/ButtonBar"
                         android:layout_width="240sp"
                         android:layout_height="135sp"
                         android:layout_weight="1"
-                        android:foreground="@drawable/ripple"
-                        android:background="@drawable/helm2" />
+                        android:background="@drawable/helm2"
+                        android:foreground="@drawable/helm2" />
 
                     <Button
                         android:id="@+id/button5"
                         android:layout_width="240sp"
                         android:layout_height="135sp"
                         android:layout_marginLeft="8sp"
-                        android:foreground="@drawable/ripple"
                         android:layout_weight="1"
-                        android:background="@drawable/helm1" />
+                        android:background="@drawable/helm1"
+                        android:foreground="@drawable/helm1" />
 
                     <Button
                         android:id="@+id/button3"
                         android:layout_width="240sp"
                         android:layout_height="135sp"
                         android:layout_marginLeft="8sp"
-                        android:foreground="@drawable/ripple"
                         android:layout_weight="1"
-                        android:background="@drawable/chapter3" />
+                        android:background="@drawable/helm2"
+                        android:foreground="@drawable/helm2" />
 
-                    <Button
-                        android:id="@+id/button4"
-                        android:layout_width="240sp"
-                        android:layout_height="135sp"
-                        android:layout_marginLeft="8sp"
-                        android:foreground="@drawable/ripple"
-                        android:layout_weight="1"
-                        android:background="@drawable/chapter4" />
 
-                    <Button
-                        android:id="@+id/button8"
-                        android:layout_width="240sp"
-                        android:layout_height="135sp"
-                        android:layout_marginLeft="8sp"
-                        android:foreground="@drawable/ripple"
-                        android:layout_weight="1"
-                        android:background="@drawable/chapter5" />
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="164dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:layout_width="390dp"
+                    android:layout_height="144dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/white" />
+                <Button
+                    android:layout_width="390dp"
+                    android:layout_height="144dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/white" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

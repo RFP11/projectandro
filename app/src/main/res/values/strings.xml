@@ -2,6 +2,8 @@
     <string name="app_name">Helmet World</string>
     <string name="hello">Hello</string>
     <string name="username">Rafly Pratma</string>
-    <string name="search_helmet">search helmet</string>
+    <string name="search_trip">search helmet</string>
     <string name="tes">testing</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="for_you">for you</string>
 </resources>
