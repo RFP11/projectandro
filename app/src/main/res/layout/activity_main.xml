@@ -176,7 +176,7 @@
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="168dp"
+                android:layout_marginTop="192dp"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -188,15 +188,15 @@
                     android:layout_height="145dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
-                    android:foreground="@drawable/helm2"
-                    android:background="@drawable/shape_radius"/>
+                    android:backgroundTint="@drawable/helm3"
+                    android:foreground="@drawable/helm3" />
 
                 <ImageButton
                     android:layout_width="380dp"
                     android:layout_height="145dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/shape_radius"/>
+                    android:background="@drawable/helm4" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
