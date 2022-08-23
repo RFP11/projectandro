@@ -109,19 +109,20 @@
         app:layout_constraintVertical_bias="0.209" />
 
     <ScrollView
+        android:id="@+id/scrolled"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/scrolled"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recee"
-        >
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="180dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pagemenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/pagemenu"
             android:layout_marginTop="10sp">
 
 
@@ -173,36 +174,97 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="192dp"
-                android:orientation="vertical"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/for_you1"
+                android:textColor="@color/white"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.041"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                tools:layout_editor_absoluteY="162dp"
+                tools:ignore="MissingConstraints" />
 
-                <Button
-                    android:layout_width="380dp"
-                    android:layout_height="145dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:backgroundTint="@drawable/helm3"
-                    android:foreground="@drawable/helm3" />
+            <ImageButton
+                android:id="@+id/btnhelm1"
+                android:layout_width="380dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/helm4"
+                android:drawablePadding="-15sp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.483"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-                <ImageButton
-                    android:layout_width="380dp"
-                    android:layout_height="145dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/helm4" />
+            <TextView
+                android:id="@+id/myImageViewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/btnhelm1"
+                android:layout_alignTop="@id/btnhelm1"
+                android:layout_alignRight="@id/btnhelm1"
+                android:layout_alignBottom="@id/btnhelm1"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2"
+                android:text="Helmet Cross"
+                android:textColor="#ffff"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/btnhelm1"
+                app:layout_constraintEnd_toEndOf="@+id/btnhelm1"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintStart_toStartOf="@+id/btnhelm1"
+                app:layout_constraintTop_toTopOf="@+id/btnhelm1"
+                app:layout_constraintVertical_bias="0.882" />
 
+            <ImageButton
+                android:id="@id/btnhelm2"
+                android:layout_width="380dp"
+                android:layout_height="145dp"
+                android:backgroundTint="@drawable/helm3"
+                android:foreground="@drawable/helm3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.483"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnhelm1"
+                app:layout_constraintVertical_bias="0.527" />
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            <TextView
+                android:id="@+id/biargasama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/btnhelm2"
+                android:layout_alignTop="@id/btnhelm2"
+                android:layout_alignRight="@id/btnhelm2"
+                android:layout_alignBottom="@id/btnhelm2"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2"
+                android:text="@string/helmet_racing"
+                android:textColor="#ffff"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/btnhelm2"
+                app:layout_constraintEnd_toEndOf="@+id/btnhelm2"
+                app:layout_constraintHorizontal_bias="0.069"
+                app:layout_constraintStart_toStartOf="@+id/btnhelm2"
+                app:layout_constraintTop_toTopOf="@+id/btnhelm2"
+                app:layout_constraintVertical_bias="0.855" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
